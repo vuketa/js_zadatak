@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Developer Task</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <input type="checkbox" id="cart_drawer_action" name="cart_drawer_action">
+    <!--  cart  -->
+    <div class="Cart_Drawer">
+        <div class="Cart_Header">
+            <p>Cart</p><label for="cart_drawer_action">&#10005;</label>
+        </div>
+        <div class="Cart_Content">
+            <!--  cart item  -->
+            <div class="Cart_Items">
+                <div class="Cart_Item">
+                    <div class="Cart_Img"><img src="https://api.cleverchoice.cc/cap.png" alt="product"/></div>
+                    <div class="Cart_Name"><p>cap</p></div>
+                    <div class="Cart_Price"><p>1</p></div>
+                    <div class="Cart_Price"><p>$59.99</p></div>
+                    <div class="Cart_Price"><p>$59.99</p></div>
+                </div>
+            </div>
+            <!--  end of cart item  -->
+        </div>
+        <div class="Cart_Footer">
+            <div class="Cart_Totals"><span>Subtotal: </span><span id="Price">$59.99</span></div>
+            <div class="Checkout_Btn">
+                <a href="#">CHECKOUT</a>
+            </div>
+            <div class="Continue_Shopping_Btn">
+                <label for="cart_drawer_action">Continue Shopping</label>
+            </div>
+        </div>
+    </div>
+    <!--  end of cart  -->
+    <label for="cart_drawer_action" class="Cart_Drawer_Backdrop"></label>
+    <!--  products  -->
+    <div id="main">
+        <div class="container">
+            <div class="row Product_List" id="products">
+              
+            </div>
+        </div>
+    </div>
+     <!--  end of products  -->
+    <script src="main.js"></script>
+</body>
+</html>
