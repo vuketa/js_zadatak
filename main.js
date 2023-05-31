@@ -39,7 +39,6 @@ const increment = (id) => {
   } else {
     cartItems.item += 1;
   }
-  
   update(id);
 };
 
@@ -49,15 +48,13 @@ const decrement = (id) => {
   else {
     cartItems.item -= 1;
   }
-  
   update(id);
 };
 
 const update = (id) => {
   let updateItem = cart.find((item) => item.id === id);
   //   console.log(updateItem.item);
-  document.querySelector(".qty_value").value = updateItem.item;
-  //   document.getElementById(id).value = updateItem.item;
+  document.getElementById(id).value = updateItem.item;
 };
 
 const displayProducts = (item) => {
@@ -67,13 +64,13 @@ const displayProducts = (item) => {
       //   const formatPrice = price / 100;
       return `
     <!--   single product  -->
-                <div class="col-sm-6 col-md-3 Single_Product" id=${id}>
+                <div class="col-sm-6 col-md-3 Single_Product" >
                     <div class="card mb-4 box-shadow">
                         <img class="card-img-top" src=${image} data-holder-rendered="true">
                         <div class="card-body">
                             <p class="card-text cc-name">${name}</p>
                             <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group" data-id="${id}">
+                                <div class="btn-group">
                                     <div class="Qty_Box">
                                         <span class="Qty_Minus" onclick="decrement(${id})">-</span>
                                         <input class="qty_value" type="text" value="1" name="qty" id=${id}>
@@ -102,11 +99,11 @@ const displayProducts = (item) => {
   //   });
 };
 
-const start = async () => {
+const init = async () => {
   const data = await fetchProducts();
   displayProducts(data);
 };
 
-start();
+init();
 
-fetchProducts();
+
